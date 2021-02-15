@@ -12,7 +12,7 @@ public class IdentityServiceImpl implements IdentityService {
   private IdGenerationRepository idGenerationRepository;
 
   @Override
-  public synchronized Identity generateNextIdentity() {
+  public Identity generateNextIdentity() {
     return new Identity(idGenerationRepository.getNextId());
   }
 }
